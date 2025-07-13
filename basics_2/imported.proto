@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "basics_2/same_level.proto";
+import "basics_2/package.proto";
+
+message BuildingWithImports {
+  string building_name = 1;
+  string building_number = 2;
+  Street street = 3;
+}
+
+message BuildingWithPackage {
+  string building_name = 1;
+  string building_number = 2;
+  basics_2.Street street = 3;
+}
